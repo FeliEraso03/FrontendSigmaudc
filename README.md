@@ -7,6 +7,10 @@ Interfaz de usuario del **Sistema Integral de Gestión de Matrícula Académica 
 - Andrés Javier Quintana Alape
 - Gustavo Calderón Kelsey
 - Isaac David Paternina Noble
+- Harry Perez Perea
+- Camilo Rodríguez Garay
+- José Félix Bustamante Soto
+- Juan Felipe Eraso Navarro
 
 ## Características
 
@@ -66,4 +70,4 @@ El proyecto está preparado para despliegue en Vercel (incluye `@vercel/analytic
 
 ## Licencia
 
-Software propietario. Copyright (c) 2025 Andrés Javier Quintana Alape, Gustavo Calderón Kelsey e Isaac David Paternina Noble. Todos los derechos reservados. Consulte el archivo `LICENSE`.
+Software propietario. Copyright (c) 2025 Andrés Javier Quintana Alape, Gustavo Calderón Kelsey, Isaac David Paternina Noble, Harry Perez Perea, Camilo Rodríguez Garay, José Félix Bustamante Soto y Juan Felipe Eraso Navarro. Todos los derechos reservados. Consulte el archivo `LICENSE`.

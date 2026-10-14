@@ -1,6 +1,8 @@
 // SIGMA-UDC — Sistema Integral de Gestión de Matrícula Académica
-// Copyright (c) 2025 Andrés Javier Quintana Alape, Gustavo Calderón Kelsey
-// e Isaac David Paternina Noble. Todos los derechos reservados.
+// Copyright (c) 2025 Andrés Javier Quintana Alape, Gustavo Calderón Kelsey,
+// Isaac David Paternina Noble, Harry Perez Perea, Camilo Rodríguez Garay,
+// José Félix Bustamante Soto y Juan Felipe Eraso Navarro.
+// Todos los derechos reservados.
 
 // Pruebas unitarias de las utilidades de cruce de horarios.
 // Se ejecutan con el runner nativo de Node: npm test (node --test).
