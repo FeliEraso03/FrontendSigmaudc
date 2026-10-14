@@ -1,3 +1,7 @@
+// SIGMA-UDC — Sistema Integral de Gestión de Matrícula Académica
+// Copyright (c) 2025 Andrés Javier Quintana Alape, Gustavo Calderón Kelsey
+// e Isaac David Paternina Noble. Todos los derechos reservados.
+
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { authService } from "../../services/auth";
@@ -327,7 +331,7 @@ const HomeEstudiante = () => {
           </div>
 
           {/* Consultar matrícula / estados */}
-          <div className="dashboard-card" onClick={() => navigate("/prueba")}>
+          <div className="dashboard-card" onClick={() => navigate("/consultar-matricula")}>
             <div className="card-gradient-overlay"></div>
             <div className="card-content">
               <div className="card-icon-wrapper">

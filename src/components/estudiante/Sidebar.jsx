@@ -1,3 +1,7 @@
+// SIGMA-UDC — Sistema Integral de Gestión de Matrícula Académica
+// Copyright (c) 2025 Andrés Javier Quintana Alape, Gustavo Calderón Kelsey
+// e Isaac David Paternina Noble. Todos los derechos reservados.
+
 /**
 * Barra lateral de navegación (Sidebar)
 * Este componente maneja la navegación principal del sistema SIGMA,
@@ -99,6 +103,7 @@ const Sidebar = forwardRef(({ activePage, setActivePage, onLogout }, ref) => {
         closeSidebar();
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activePage]);
 
   // Cerrar sidebar al hacer click en backdrop
@@ -235,7 +240,7 @@ const Sidebar = forwardRef(({ activePage, setActivePage, onLogout }, ref) => {
 
         {/* Opción: Consultar matrícula */}
         <div className="icon-content">
-          <button className={activePage === "Consultar" ? "active" : ""} onClick={() => setActivePage("prueba")}>
+          <button className={activePage === "consultar" ? "active" : ""} onClick={() => setActivePage("consultar")}>
             <FaSearch size={23} /> <span>Consultar matrícula</span>
           </button>
           {!isOpen && <span className="tooltip">Consultar matrícula</span>}

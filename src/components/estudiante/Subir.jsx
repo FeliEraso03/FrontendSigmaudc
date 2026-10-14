@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// SIGMA-UDC — Sistema Integral de Gestión de Matrícula Académica
+// Copyright (c) 2025 Andrés Javier Quintana Alape, Gustavo Calderón Kelsey
+// e Isaac David Paternina Noble. Todos los derechos reservados.
+
+import { useState, useEffect } from "react";
 import documentosService from "../../services/documentos";
 import "../../styles/Subir.css";
 import { FaUpload, FaFileAlt, FaCheckCircle, FaTimesCircle, FaSpinner, FaExclamationTriangle } from "react-icons/fa";
@@ -7,7 +10,6 @@ import { FaFileUpload } from "react-icons/fa";
 import { getApiErrorMessage } from "../../utils/apiError";
 
 const SubirDocumentos = () => {
-  const navigate = useNavigate();
   const [documentos, setDocumentos] = useState([]);
   const [periodoActivo, setPeriodoActivo] = useState(null);
   const [puedeSubir, setPuedeSubir] = useState(false);
@@ -38,7 +40,6 @@ const SubirDocumentos = () => {
       setPlazoMensaje(mensaje);
       setError(null);
     } catch (err) {
-      console.error("Error loading documentos:", err);
       setError(getApiErrorMessage(err, "Error al cargar documentos"));
     } finally {
       setLoading(false);
@@ -53,11 +54,6 @@ const SubirDocumentos = () => {
     const doc = getDocumentoPorTipo(tipo);
     if (!doc) return "sin_subir";
     return doc.estado; // "pendiente", "aprobado", "rechazado"
-  };
-
-  const getPuedeResubir = (tipo) => {
-    const estado = getEstadoDocumento(tipo);
-    return estado === "rechazado";
   };
 
   const handlePagoChange = (e) => {
@@ -94,7 +90,7 @@ const SubirDocumentos = () => {
       setError(null);
       setSuccess(null);
 
-      const response = await documentosService.subirDocumento(tipoDocumento, archivo);
+      await documentosService.subirDocumento(tipoDocumento, archivo);
       setSuccess(`Documento ${tipoDocumento === "certificado_eps" ? "EPS" : "Matrícula"} subido exitosamente`);
 
       // Limpiar archivo seleccionado
@@ -110,7 +106,6 @@ const SubirDocumentos = () => {
       // Limpiar mensaje de éxito después de 3 segundos
       setTimeout(() => setSuccess(null), 3000);
     } catch (err) {
-      console.error("Error uploading documento:", err);
       setError(getApiErrorMessage(err, `Error al subir ${tipoDocumento}`));
     } finally {
       setUploading({ ...uploading, [tipoDocumento]: false });

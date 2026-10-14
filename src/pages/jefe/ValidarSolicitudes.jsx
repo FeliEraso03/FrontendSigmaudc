@@ -1,3 +1,7 @@
+// SIGMA-UDC — Sistema Integral de Gestión de Matrícula Académica
+// Copyright (c) 2025 Andrés Javier Quintana Alape, Gustavo Calderón Kelsey
+// e Isaac David Paternina Noble. Todos los derechos reservados.
+
 import React, { useState, useEffect, useCallback } from "react";
 import { matriculaService } from "../../services/matricula";
 import HorarioGrid from "../../components/common/HorarioGrid";
@@ -200,6 +204,7 @@ const ValidarSolicitudes = () => {
 
   useEffect(() => {
     loadSolicitudes();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filtroEstado, page]);
 
   useEffect(() => {
@@ -216,6 +221,7 @@ const ValidarSolicitudes = () => {
     });
 
     return () => unsubscribe();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filtroEstado, page]);
 
   const loadSolicitudes = async () => {
@@ -585,7 +591,7 @@ const SolicitudCard = ({ solicitud, onValidar, procesando }) => {
                         <dd>{est?.semestre ?? "—"}</dd>
                       </div>
                       <div>
-                        <dt>Periodo</dt>
+                        <dt>Período</dt>
                         <dd>
                           {vistaPrevia.periodo
                             ? `${vistaPrevia.periodo.year}-${vistaPrevia.periodo.semestre}`

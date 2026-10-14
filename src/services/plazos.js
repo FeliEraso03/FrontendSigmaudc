@@ -1,4 +1,8 @@
-import api from './auth';
+// SIGMA-UDC — Sistema Integral de Gestión de Matrícula Académica
+// Copyright (c) 2025 Andrés Javier Quintana Alape, Gustavo Calderón Kelsey
+// e Isaac David Paternina Noble. Todos los derechos reservados.
+
+import api from './api';
 
 export const plazosService = {
   // Obtener el periodo activo junto con los plazos del programa del usuario

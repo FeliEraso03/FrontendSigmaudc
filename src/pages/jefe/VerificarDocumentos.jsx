@@ -1,3 +1,7 @@
+// SIGMA-UDC — Sistema Integral de Gestión de Matrícula Académica
+// Copyright (c) 2025 Andrés Javier Quintana Alape, Gustavo Calderón Kelsey
+// e Isaac David Paternina Noble. Todos los derechos reservados.
+
 import React, { useState, useEffect } from "react";
 import documentosService from "../../services/documentos";
 import "../../styles/VerificarDocumentos.css";
@@ -30,6 +34,7 @@ const VerificarDocumentos = () => {
 
   useEffect(() => {
     loadDocumentos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filtroEstado, page]);
 
   const loadDocumentos = async () => {
