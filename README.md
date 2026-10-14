@@ -39,6 +39,7 @@ npm install      # instalar dependencias
 npm run dev      # servidor de desarrollo (Vite)
 npm run build    # compilación de producción en dist/
 npm run lint     # análisis estático con ESLint
+npm test         # pruebas unitarias (runner nativo de Node, node:test)
 npm run preview  # vista previa local del build de producción
 ```
 
